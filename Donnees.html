@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT News Today</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #A41C2D;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    header .home-button {
+      padding: 10px 15px;
+      background-color: #fff;
+      color: #A41C2D;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    header .home-button:hover {
+      background-color: #e8f0fe;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .news-item {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .news-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px 8px 0 0;
+    }
+    .news-content {
+      padding: 15px;
+    }
+    .news-title {
+      font-size: 1.5em;
+      margin: 0 0 10px;
+      color: #333;
+    }
+    .news-description {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .author {
+      font-size: 0.9em;
+      color: #0073e6;
+      font-style: italic;
+    }
+    .load-more {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #A41C2D;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .load-more:hover {
+      background-color: #0f5bb5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IT News Today</h1>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Navigation</title>
+      <style>
+        button {
+          background-color: #A41C2D;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 15px;
+          font-size: 16px;
+          margin: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        button:hover {
+          background-color: #A41C2D;
+        }
+        button a {
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+        }
+        button a:hover {
+          color: #e8f0fe;
+        }
+      </style>
+    </head>
+    <body>
+      
+      <button><a href="index.html">Home</a></button>
+      <button><a href="Inscription.html">Inscription</a></button>
+      <button><a href="Contenus.html">Contenus</a></button>
+      <button><a href="Medias.html">Médias</a></button>
+    </body>
+    </html>
+    
+  </header>
+
+  <div class="container" id="newsContainer">
+    <!-- News items will be injected here dynamically -->
+  </div>
+
+  <button class="load-more" id="loadMore">Load More News</button>
+
+  <script>
+    const newsArticles = [
+      {
+        title: "The Future of Artificial Intelligence",
+        image: "https://via.placeholder.com/800x400?text=AI+News",
+        description: "Artificial Intelligence (AI) is transforming the way we live and work, offering groundbreaking advancements in various fields.",
+        author: "Sarah Connor",
+      },
+      {
+        title: "5G Technology: What You Need to Know",
+        image: "https://via.placeholder.com/800x400?text=5G+Technology",
+        description: "5G is revolutionizing connectivity, offering faster speeds and reduced latency, paving the way for new technological innovations.",
+        author: "James Smith",
+      },
+      {
+        title: "Cybersecurity Trends for 2024",
+        image: "https://via.placeholder.com/800x400?text=Cybersecurity+Trends",
+        description: "Cybersecurity is becoming increasingly critical as digital threats evolve. Here are the top trends to watch in 2024.",
+        author: "Jane Doe",
+      },
+    ];
+
+    let articlesShown = 0;
+
+    function loadArticles() {
+      const container = document.getElementById("newsContainer");
+      const articlesToShow = newsArticles.slice(articlesShown, articlesShown + 2);
+
+      articlesToShow.forEach((article) => {
+        const newsDiv = document.createElement("div");
+        newsDiv.className = "news-item";
+
+        newsDiv.innerHTML = `
+          <img src="${article.image}" alt="${article.title}">
+          <div class="news-content">
+            <h2 class="news-title">${article.title}</h2>
+            <p class="news-description">${article.description}</p>
+            <p class="author">By: ${article.author}</p>
+          </div>
+        `;
+        container.appendChild(newsDiv);
+      });
+
+      articlesShown += articlesToShow.length;
+
+      if (articlesShown >= newsArticles.length) {
+        document.getElementById("loadMore").style.display = "none";
+      }
+    }
+
+    document.getElementById("loadMore").addEventListener("click", loadArticles);
+
+    // Redirect to homepage (example: you can change the URL)
+    function goHome() {
+      alert("Redirecting to homepage...");
+      window.location.href = "index.html"; // Change this to your actual homepage URL
+    }
+
+    // Initial load
+    loadArticles();
+  </script>
+</body>
+</html>
