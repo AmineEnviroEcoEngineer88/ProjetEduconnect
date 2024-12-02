@@ -1,0 +1,405 @@
+/* poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Beau Rivage*/
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+
+/* Default*/
+/*---------------------------------------*/
+/* Reset default margin and padding */
+body{
+  height: 100%;
+}
+body, h1, h2, h3, p, ul, ol, li, table, th, td {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply default font and styles */
+  body {
+    font-family: poppins, sans-serif;
+    line-height: 1.6;
+  }
+  /* Apply default table styles */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Adjust background color for header cells */
+  }
+  /*---------------------------------------*/
+  /* Header style */
+  /*---------------------------------------*/
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #A41C2D;
+    z-index: 999;
+  }
+  /* Add space between hero section and the header */
+  #hero~section, section {
+    padding-top: 100px;
+  }
+  .navegation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .navegation .logo {
+    cursor: pointer;
+  }
+  .navegation .logo img {
+    max-height: 70px;
+    width: auto;
+  }
+  .navegation .mainMenu {
+    display: flex;
+    list-style: none;
+  }
+  .navegation .mainMenu li a {
+    color: #fff;
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3em;
+  }
+    /*Hamburger Menu*/
+  .navegation .openMenu, 
+  .navegation .closeMenu {
+    color: #fff;
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+/*---------------------------------------*/
+/* home page */
+/* hero */
+#hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-image: url('../img/hero1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+#hero h1{
+    color: #fff;
+    font-size: 6em;
+    margin-bottom: 10px;
+}
+#hero h3{
+    color: #fff;
+    margin-bottom: 10px;
+}
+.button {
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #A41C2D;
+    border: 3px solid #A41C2D;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: top 4s ease;
+  }
+  
+  .button:hover {
+    background-color: #A41C2D;
+    color: #fff;
+    border-radius: 6px;
+  }
+  /* toggle */
+  .toggle-view-button{
+    text-decoration: none;
+    margin-top: 150px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #A41C2D;
+    border: 3px solid #A41C2D;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: top 4s ease;
+  }
+  .toggle-view-button:hover {
+    background-color: #A41C2D;
+    color: #fff;
+    border-radius: 6px;
+  }
+  /* introduciton-block , secondary-block*/
+  #introduciton-block, #about-the-course-block{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* style for all the secions title*/
+  .titleH2{
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #A41C2D;
+  }
+  
+  #introduciton-block h3 {
+    font-weight: 250;
+  }
+  #about-the-course-block p{
+    width: 80%;
+    margin-bottom: 30px;
+    line-height: 2;
+  }
+  #introduciton-block .intro-video{
+    width: 100%;
+    height: auto;
+  }
+  #introduciton-block .intro-video iframe{
+    width: 800px;
+    height: 450px;
+  }
+  /*---------------------------------------*/
+  /* thumbnail-view , list-view*/
+  .thumbnail-view, .list-view {
+    text-align: center;
+  }
+  .thumbnial-elements{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .view {
+    background-color: #fff;
+    margin: 20px;
+    padding: 15px 5px 15px 5px;
+    width: 21.25em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .view iframe {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .view h3 {
+    font-weight: 300;
+  }
+  .list-view ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+  }
+  .view:last-child {
+    margin-bottom: 15px;
+  }
+  .view a{
+    text-decoration: none;
+    color: #000;
+  }
+
+  /**/
+  /* Contenus.html */
+  .articles-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .table-of-contents{
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #000;
+    color: #c8c2c2;
+  }
+  .table-of-contents .toc-container h2{
+    margin-bottom: 30px;
+  }
+  .table-of-contents .toc-container ul li{
+    margin-bottom: 30px;
+  }
+  .table-of-contents .toc-container ul li a{
+    text-decoration: none;
+    color: #c8c2c2;
+  }
+  
+  .articles:last-child{
+    margin-bottom: 35px;
+  }
+  
+
+   /* inscription form */
+   #contact {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input,select,textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  input:focus, select:focus,
+  textarea:focus {
+    outline: none;
+    border: 2px solid #A41C2D;
+  }
+  /*drag and drop style */
+  .blocks{
+    text-align: center;
+  }
+  .block {
+    background-color: gainsboro;
+    padding: 5px;
+    
+  }
+  .empty-container{
+    margin: 100px;
+    padding: 15px;
+    background-color: green;
+    border: 5px solid #A41C2D;
+    border-radius: 5px;
+  }
+  .form-container{
+    align-items: center;
+    margin: 100px;
+  }
+  /*---------------------------------------*/
+  /*Medias page*/
+  .list-view{
+    display: none;
+  }
+  /*--------------------------------------*/
+  /*Wow page*/
+  .background-slider{
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('../img/wow1.png');
+  }
+  #wow h1{
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  /*Donnees*/
+  .data-table{
+    margin-top: 50px;
+  }
+
+
+
+
+
+
+
+  
+  /* Style Footer */
+  footer, .footer1 {
+    background-color: #A41C2D;
+    color: #fff;
+    padding: 10px;
+    left: 0;
+    width: 100%;
+    background-color: #A41C2D;
+    z-index: 999;
+    text-align: center;
+    padding: 10px 0;
+    text-align: center;
+  }
+  footer p a , .footer1 p a{
+    font-size: 200;
+    color: #fff;
+
+  }
+  /* wow foter */
+  .footer1{
+    position: fixed;
+    bottom: 0;
+  }
+
+
+
+  /* Smartphone layout */
+    @media(max-width: 900px) {
+    /* hamburger menu */
+    /*---------------------------------------*/
+    .navegation .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 999;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #A41C2D;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .navegation .openMenu {
+        display: block;
+    }
+    /* Adjusting top padding when the menu is open */
+    .navegation.menu-open {
+        padding-top: 100px;
+    }
+    /*---------------------------------------*/
+    /* home -> second secion -> video*/
+    #introduciton-block .intro-video iframe{
+        width: 560px;
+        height: 315px;
+    }
+    /*---------------------------------------*/
+
+  }
+  
