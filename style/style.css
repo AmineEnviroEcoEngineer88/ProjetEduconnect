@@ -86,6 +86,52 @@ body, h1, h2, h3, p, ul, ol, li, table, th, td {
     display: none;
     cursor: pointer;
   }
+
+#cookies-banner {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #A41C2D;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    z-index: 1000;
+    display: block; /* Initially hidden */
+  }
+  
+  #cookies-banner p {
+    margin: 0;
+    display: inline-block;
+  }
+  
+  #cookies-banner a {
+    color: #FFD700;
+    text-decoration: underline;
+  }
+  
+  .cookie-checkbox:checked + #cookies-banner {
+    display: none;
+}
+
+/* Hide the checkbox input element itself */
+.cookie-checkbox {
+    display: none;
+}
+
+/* Style the accept button to look like a button */
+.accept-button {
+  background-color: white;
+  color: #A41C2D;
+  border: none;
+  border-radius: 1000px;
+  padding: 3px 5px;  /* Reduced padding for a smaller button */
+  margin-left: 650px;
+  margin-right: 650px;
+  cursor: pointer;
+  font-size: 12px;
+}
 /*---------------------------------------*/
 /* home page */
 /* hero */
